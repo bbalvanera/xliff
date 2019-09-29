@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      Module
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-start">
+      <div ngbDropdown class="flex-fill flex-grow-1">
+        <button class="btn btn-block btn-outline-secondary" id="select-modules" ngbDropdownToggle>Select module</button>
+        <div ngbDropdownMenu aria-labelledby="select-modules">
+          <button ngbDropdownItem>Action - 1</button>
+        </div>
+      </div>
+      <button class="btn btn-outline-primary"><i class="fas fa-plus"></i></button>
+      <button class="btn btn-outline-primary"><i class="far fa-trash-alt"></i></button>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col-12 d-flex justify-content-start">
+      <div class="form-group w-100">
+        <label for="literal-input">Literal ID</label>
+        <input type="text" class="form-control form-control-block" id="literal-input" placeholder="Enter literal id" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-start">
+      <div class="form-group w-100">
+        <label for="description-input">Description</label>
+        <input type="text" class="form-control form-control-block" id="description-input" placeholder="Enter literal description" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-start">
+      <div>Plural<input type="checkbox" /></div>
+      <div class="form-group w-100 flex-fill flex-grow-1">
+        <label for="description-input">Relative Path</label>
+        <input type="text" class="form-control form-control-block" id="description-input" placeholder="Enter literal description" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,34 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { LiteralsComponent } from './components/literals/literals.component';
+import { SelectorsComponent } from './components/literals/selectors/selectors.component';
+import { LiteralsListComponent } from './components/literals/literals-list/literals-list.component';
+import { LiteralAddComponent } from './components/literals/literal-add/literal-add.component';
+import { LiteralVariablesComponent } from './components/literals/literal-variables/literal-variables.component';
+import { LiteralValuesComponent } from './components/literals/literal-values/literal-values.component';
+import { LiteralStatusComponent } from './components/literals/literal-status/literal-status.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent
-  ],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
-  ],
+  declarations: [AppComponent, LiteralsComponent, SelectorsComponent, LiteralsListComponent, LiteralAddComponent, LiteralVariablesComponent, LiteralValuesComponent, LiteralStatusComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
