@@ -5,8 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace literals.example.com.Models
 {
     public class Literals
-    {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    {        
         public Literals()
         {
             LiteralTranslations = new HashSet<LiteralTranslations>();
@@ -33,11 +32,9 @@ namespace literals.example.com.Models
         public string ExampleURL { get; set; }
 
         public virtual Modules Modules { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+                
         public virtual ICollection<LiteralTranslations> LiteralTranslations { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+                
         public virtual ICollection<Variables> Variables { get; set; }
     }
 }

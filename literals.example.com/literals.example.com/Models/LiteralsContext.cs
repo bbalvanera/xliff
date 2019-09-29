@@ -14,8 +14,7 @@ namespace literals.example.com.Models
         public LiteralsContext(DbContextOptions options) : base(options)
         {
         }
-
-        //Entities
+        
         public DbSet<Countries> countries { get; set; }
         public DbSet<Languages> languages { get; set; }
         public DbSet<Literals> literals { get; set; }

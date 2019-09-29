@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace literals.example.com.Models
 {
-    public partial class Variables
+    public class Variables
     {
         [Key]
         public Guid VariableID { get; set; }

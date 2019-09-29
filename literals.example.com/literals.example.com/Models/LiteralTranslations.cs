@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace literals.example.com.Models
 {  
 
-    public partial class LiteralTranslations
+    public class LiteralTranslations
     {
         [Key]
         public Guid LiteralTranslationID { get; set; }
