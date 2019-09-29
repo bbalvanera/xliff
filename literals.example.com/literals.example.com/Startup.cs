@@ -1,7 +1,9 @@
+using literals.example.com.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,8 +23,11 @@ namespace literals.example.com
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-      // In production, the Angular files will be served from this directory
-      services.AddSpaStaticFiles(configuration =>
+      services.AddDbContext<LiteralsContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("LiteralsContext")));
+       
+
+        // In production, the Angular files will be served from this directory
+        services.AddSpaStaticFiles(configuration =>
       {
         configuration.RootPath = "ClientApp/dist";
       });
